@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+ext {
+    pubnubVersion = '4.25.0'
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId getAppId()
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders = [appname: getAppName()]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+def getAppId() {
+    String v = ext.pubnubVersion
+    v = v.replace(".", "")
+    return "com.pubnub.signalscompat.ver$v"
+}
+
+def getAppName() {
+    return "PN Compat $ext.pubnubVersion"
+}
+
+dependencies {
+    implementation "com.pubnub:pubnub-gson:$pubnubVersion"
+    implementation project(path: ':pn_common')
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}

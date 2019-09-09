@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PNSignalsCompat.iml" filepath="$PROJECT_DIR$/PNSignalsCompat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app_pn_25/app_pn_25.iml" filepath="$PROJECT_DIR$/app_pn_25/app_pn_25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app_pn_26/app_pn_26.iml" filepath="$PROJECT_DIR$/app_pn_26/app_pn_26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pn_common/pn_common.iml" filepath="$PROJECT_DIR$/pn_common/pn_common.iml" />
+    </modules>
+  </component>
+</project>

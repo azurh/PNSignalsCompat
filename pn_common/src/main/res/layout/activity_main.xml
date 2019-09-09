@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pn_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pn_version"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Message" />
+
+        <Button
+            android:id="@+id/btn_signal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Signal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/log_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+    </ScrollView>
+
+
+</RelativeLayout>
